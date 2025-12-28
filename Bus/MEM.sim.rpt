@@ -1,0 +1,228 @@
+Simulator report for MEM
+Fri Dec 12 00:40:18 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 29 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 99           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 29           ;
+; Total output ports checked                          ; 16           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 16           ;
+; Total output ports with no 1-value coverage         ; 16           ;
+; Total output ports with no 0-value coverage         ; 16           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------+
+; Missing 1-Value Coverage                          ;
++-------------+------------------+------------------+
+; Node Name   ; Output Port Name ; Output Port Type ;
++-------------+------------------+------------------+
+; |Bus|CRT[7] ; |Bus|CRT[7]      ; pin_out          ;
+; |Bus|CRT[6] ; |Bus|CRT[6]      ; pin_out          ;
+; |Bus|CRT[5] ; |Bus|CRT[5]      ; pin_out          ;
+; |Bus|CRT[4] ; |Bus|CRT[4]      ; pin_out          ;
+; |Bus|CRT[3] ; |Bus|CRT[3]      ; pin_out          ;
+; |Bus|CRT[2] ; |Bus|CRT[2]      ; pin_out          ;
+; |Bus|CRT[1] ; |Bus|CRT[1]      ; pin_out          ;
+; |Bus|CRT[0] ; |Bus|CRT[0]      ; pin_out          ;
+; |Bus|q[7]   ; |Bus|q[7]        ; out              ;
+; |Bus|q[6]   ; |Bus|q[6]        ; out              ;
+; |Bus|q[5]   ; |Bus|q[5]        ; out              ;
+; |Bus|q[4]   ; |Bus|q[4]        ; out              ;
+; |Bus|q[3]   ; |Bus|q[3]        ; out              ;
+; |Bus|q[2]   ; |Bus|q[2]        ; out              ;
+; |Bus|q[1]   ; |Bus|q[1]        ; out              ;
+; |Bus|q[0]   ; |Bus|q[0]        ; out              ;
++-------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------+
+; Missing 0-Value Coverage                          ;
++-------------+------------------+------------------+
+; Node Name   ; Output Port Name ; Output Port Type ;
++-------------+------------------+------------------+
+; |Bus|CRT[7] ; |Bus|CRT[7]      ; pin_out          ;
+; |Bus|CRT[6] ; |Bus|CRT[6]      ; pin_out          ;
+; |Bus|CRT[5] ; |Bus|CRT[5]      ; pin_out          ;
+; |Bus|CRT[4] ; |Bus|CRT[4]      ; pin_out          ;
+; |Bus|CRT[3] ; |Bus|CRT[3]      ; pin_out          ;
+; |Bus|CRT[2] ; |Bus|CRT[2]      ; pin_out          ;
+; |Bus|CRT[1] ; |Bus|CRT[1]      ; pin_out          ;
+; |Bus|CRT[0] ; |Bus|CRT[0]      ; pin_out          ;
+; |Bus|q[7]   ; |Bus|q[7]        ; out              ;
+; |Bus|q[6]   ; |Bus|q[6]        ; out              ;
+; |Bus|q[5]   ; |Bus|q[5]        ; out              ;
+; |Bus|q[4]   ; |Bus|q[4]        ; out              ;
+; |Bus|q[3]   ; |Bus|q[3]        ; out              ;
+; |Bus|q[2]   ; |Bus|q[2]        ; out              ;
+; |Bus|q[1]   ; |Bus|q[1]        ; out              ;
+; |Bus|q[0]   ; |Bus|q[0]        ; out              ;
++-------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 12 00:40:18 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MEM -c MEM
+Info: Using vector source file "C:/Users/29817/Desktop/Quartus/MEM/MEM.vwf"
+Warning: Can't find node "A[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "A[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "CS" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[7]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[6]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[5]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[4]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[3]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[2]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[1]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "D[0]" for functional simulation. Ignored vector source file node.
+Warning: Can't find node "wren" for functional simulation. Ignored vector source file node.
+Warning: Wrong node type for node "Q[7]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[6]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[5]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[4]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[3]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[2]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[1]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "Q[0]" in vector source file. Design node is of type Input, but signal in vector source file is of type Output.
+Warning: Can't find signal in vector source file for input pin "|Bus|G_MEM"
+Warning: Can't find signal in vector source file for input pin "|Bus|wen_MEM"
+Warning: Can't find signal in vector source file for input pin "|Bus|wen_LA"
+Warning: Can't find signal in vector source file for input pin "|Bus|G_KEY"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[7]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[6]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[5]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[4]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[3]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[2]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[1]"
+Warning: Can't find signal in vector source file for input pin "|Bus|KEY[0]"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 99
+Info: Quartus II Simulator was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Fri Dec 12 00:40:20 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

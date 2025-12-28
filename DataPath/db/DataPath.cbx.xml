@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DataPath">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|ALU:inst|lpm_add_sub0:inst1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_pnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|MEM:inst2|MEM_lpm_mux0:inst4|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|Register:GPRS|lpm_mux0:inst13|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_1oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|lpm_counter1:inst17|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_inj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|datapath_lpm_mux:inst8|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_onc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|ALU:inst|ALU_lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_1oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|ALU:inst|lpm_add_sub0:ADD|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_pnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|ALU:inst|lpm_decode1:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_p7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|MEM:inst2|lpm_ram_dq0:RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3kb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|MEM:inst2|lpm_rom0:ROM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_c981.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|Register:GPRS|GPRS_lpm_decode0:inst1|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_0sf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

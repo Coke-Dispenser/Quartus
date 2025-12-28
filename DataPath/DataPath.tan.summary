@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.483 ns
+From           : RD[1]
+To             : datapath_lpm_dff:inst5|lpm_ff:lpm_ff_component|dffs[3]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.364 ns
+From           : Register:GPRS|lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3]
+To             : CRT[3]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.425 ns
+From           : RD[1]
+To             : CRT[3]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.579 ns
+From           : MemWr
+To             : MEM:inst2|lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 286.45 MHz ( period = 3.491 ns )
+From           : Register:GPRS|lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4]
+To             : datapath_lpm_dff:inst5|lpm_ff:lpm_ff_component|dffs[4]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

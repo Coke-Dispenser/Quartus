@@ -1,0 +1,75 @@
+MIF/HEX Update report for DataPath
+Sat Dec 27 15:33:05 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------+
+; MIF/HEX Update Summary                                    ;
++-----------------------+-----------------------------------+
+; MIF/HEX Update Status ; Failed - Sat Dec 27 15:33:05 2025 ;
+; Revision Name         ; DataPath                          ;
+; Top-level Entity Name ; DataPath                          ;
+; Family                ; Stratix II                        ;
+; Device                ; EP2S15F484C3                      ;
++-----------------------+-----------------------------------+
+
+
++--------------------------------+
+; MIF/HEX Update Processed Files ;
++--------------------------------+
+; File Name                      ;
++--------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II MIF/HEX Update
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 27 15:33:05 2025
+Info: Command: quartus_cdb DataPath -c DataPath --update_mif
+Warning: Tcl Script File lpm_dff0.qip not found
+    Info: set_global_assignment -name QIP_FILE lpm_dff0.qip
+Warning: Tcl Script File lpm_mux0.qip not found
+    Info: set_global_assignment -name QIP_FILE lpm_mux0.qip
+Warning: Tcl Script File ../ALU/lpm_mux0.qip not found
+    Info: set_global_assignment -name QIP_FILE ../ALU/lpm_mux0.qip
+Warning: Can't find Memory Initialization File rom.mif -- skipped updates for this file
+Error: Found no Memory Initialization Files to process
+Error: Quartus II MIF/HEX Update was unsuccessful. 1 error, 4 warnings
+    Error: Peak virtual memory: 244 megabytes
+    Error: Processing ended: Sat Dec 27 15:33:08 2025
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,479 @@
+Classic Timing Analyzer report for MEM
+Sat Dec 27 15:32:22 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                                                      ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                                                                                          ; To                                                                                                            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.204 ns                                       ; CS                                                                                                            ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5   ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.365 ns                                       ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5   ; Q[2]                                                                                                          ; clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 8.705 ns                                       ; A[6]                                                                                                          ; Q[2]                                                                                                          ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.127 ns                                      ; D[5]                                                                                                          ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5 ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                                                                               ;                                                                                                               ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 24     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                                                                                                                                               ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                                          ; To                                                                                                            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a1~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a2~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a3~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a4~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a5~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a6~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7 ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock      ; clock    ; None                        ; None                      ; 1.720 ns                ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                  ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                                                                                                             ; To Clock ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A   ; None         ; 4.204 ns   ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A   ; None         ; 3.985 ns   ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A   ; None         ; 3.815 ns   ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A   ; None         ; 3.596 ns   ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A   ; None         ; 3.202 ns   ; A[2] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A   ; None         ; 3.103 ns   ; A[1] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A   ; None         ; 3.027 ns   ; A[0] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A   ; None         ; 2.863 ns   ; A[4] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A   ; None         ; 2.826 ns   ; A[2] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A   ; None         ; 2.826 ns   ; D[0] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A   ; None         ; 2.825 ns   ; A[0] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A   ; None         ; 2.802 ns   ; D[4] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A   ; None         ; 2.795 ns   ; D[2] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A   ; None         ; 2.779 ns   ; D[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A   ; None         ; 2.727 ns   ; A[1] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A   ; None         ; 2.720 ns   ; A[4] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A   ; None         ; 2.627 ns   ; wren ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A   ; None         ; 2.605 ns   ; D[1] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A   ; None         ; 2.555 ns   ; A[3] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A   ; None         ; 2.552 ns   ; A[3] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A   ; None         ; 2.535 ns   ; D[7] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A   ; None         ; 2.371 ns   ; A[5] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
+; N/A   ; None         ; 2.365 ns   ; A[5] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A   ; None         ; 2.363 ns   ; D[3] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A   ; None         ; 2.352 ns   ; D[5] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                    ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                           ; To   ; From Clock ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------+------+------------+
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.365 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.357 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[2] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.241 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[5] ; clock      ;
+; N/A   ; None         ; 8.217 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[5] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.846 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.832 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[4] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.522 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.517 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.497 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.443 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[7] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.382 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[0] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.346 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[1] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.332 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[3] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.282 ns   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; Q[6] ; clock      ;
+; N/A   ; None         ; 7.279 ns   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; Q[6] ; clock      ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------+------+------------+
+
+
++-----------------------------------------------------------+
+; tpd                                                       ;
++-------+-------------------+-----------------+------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To   ;
++-------+-------------------+-----------------+------+------+
+; N/A   ; None              ; 8.705 ns        ; A[6] ; Q[2] ;
+; N/A   ; None              ; 8.377 ns        ; A[6] ; Q[5] ;
+; N/A   ; None              ; 8.166 ns        ; A[6] ; Q[4] ;
+; N/A   ; None              ; 7.794 ns        ; A[6] ; Q[7] ;
+; N/A   ; None              ; 7.682 ns        ; A[6] ; Q[0] ;
+; N/A   ; None              ; 7.673 ns        ; A[6] ; Q[1] ;
+; N/A   ; None              ; 7.672 ns        ; A[6] ; Q[3] ;
+; N/A   ; None              ; 7.616 ns        ; A[6] ; Q[6] ;
++-------+-------------------+-----------------+------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                         ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                                                                                                             ; To Clock ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; -2.127 ns ; D[5] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
+; N/A           ; None        ; -2.138 ns ; D[3] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A           ; None        ; -2.140 ns ; A[5] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A           ; None        ; -2.146 ns ; A[5] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
+; N/A           ; None        ; -2.310 ns ; D[7] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A           ; None        ; -2.327 ns ; A[3] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A           ; None        ; -2.330 ns ; A[3] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A           ; None        ; -2.380 ns ; D[1] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A           ; None        ; -2.402 ns ; wren ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A           ; None        ; -2.495 ns ; A[4] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A           ; None        ; -2.502 ns ; A[1] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A           ; None        ; -2.554 ns ; D[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A           ; None        ; -2.570 ns ; D[2] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A           ; None        ; -2.577 ns ; D[4] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A           ; None        ; -2.600 ns ; A[0] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A           ; None        ; -2.601 ns ; A[2] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A           ; None        ; -2.601 ns ; D[0] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A           ; None        ; -2.638 ns ; A[4] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A           ; None        ; -2.802 ns ; A[0] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A           ; None        ; -2.878 ns ; A[1] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A           ; None        ; -2.977 ns ; A[2] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A           ; None        ; -3.371 ns ; A[6] ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A           ; None        ; -3.590 ns ; A[6] ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_we_reg       ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg1  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg2  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg3  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg4  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg6  ; clock    ;
+; N/A           ; None        ; -3.760 ns ; CS   ; lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg7  ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0    ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg1    ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg2    ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg3    ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg4    ; clock    ;
+; N/A           ; None        ; -3.979 ns ; CS   ; lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg5    ; clock    ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 27 15:32:22 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off MEM -c MEM --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: Clock "clock" Internal fmax is restricted to 500.0 MHz between source memory "lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0" and destination memory "lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_memory_reg0"
+    Info: fmax restricted to Clock High delay (1.0 ns) plus Clock Low delay (1.0 ns) : restricted to 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest memory to memory delay is 1.720 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = M512_X24_Y1; Fanout = 1; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0'
+            Info: 2: + IC(0.000 ns) + CELL(1.720 ns) = 1.720 ns; Loc. = M512_X24_Y1; Fanout = 0; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_memory_reg0'
+            Info: Total cell delay = 1.720 ns ( 100.00 % )
+        Info: - Smallest clock skew is -0.046 ns
+            Info: + Shortest clock path from clock "clock" to destination memory is 2.289 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clock~clkctrl'
+                Info: 3: + IC(0.679 ns) + CELL(0.413 ns) = 2.289 ns; Loc. = M512_X24_Y1; Fanout = 0; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_memory_reg0'
+                Info: Total cell delay = 1.267 ns ( 55.35 % )
+                Info: Total interconnect delay = 1.022 ns ( 44.65 % )
+            Info: - Longest clock path from clock "clock" to source memory is 2.335 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clock~clkctrl'
+                Info: 3: + IC(0.679 ns) + CELL(0.459 ns) = 2.335 ns; Loc. = M512_X24_Y1; Fanout = 1; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg0'
+                Info: Total cell delay = 1.313 ns ( 56.23 % )
+                Info: Total interconnect delay = 1.022 ns ( 43.77 % )
+        Info: + Micro clock to output delay of source is 0.140 ns
+        Info: + Micro setup delay of destination is 0.022 ns
+Info: tsu for memory "lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0" (data pin = "CS", clock pin = "clock") is 4.204 ns
+    Info: + Longest pin to memory delay is 6.514 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_V18; Fanout = 2; PIN Node = 'CS'
+        Info: 2: + IC(4.349 ns) + CELL(0.366 ns) = 5.535 ns; Loc. = LCCOMB_X25_Y1_N2; Fanout = 6; COMB Node = 'inst1'
+        Info: 3: + IC(0.539 ns) + CELL(0.440 ns) = 6.514 ns; Loc. = M512_X24_Y2; Fanout = 8; MEM Node = 'lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: Total cell delay = 1.626 ns ( 24.96 % )
+        Info: Total interconnect delay = 4.888 ns ( 75.04 % )
+    Info: + Micro setup delay of destination is 0.022 ns
+    Info: - Shortest clock path from clock "clock" to destination memory is 2.332 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.677 ns) + CELL(0.458 ns) = 2.332 ns; Loc. = M512_X24_Y2; Fanout = 8; MEM Node = 'lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: Total cell delay = 1.312 ns ( 56.26 % )
+        Info: Total interconnect delay = 1.020 ns ( 43.74 % )
+Info: tco from clock "clock" to destination pin "Q[2]" through memory "lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0" is 8.365 ns
+    Info: + Longest clock path from clock "clock" to source memory is 2.332 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.677 ns) + CELL(0.458 ns) = 2.332 ns; Loc. = M512_X24_Y2; Fanout = 8; MEM Node = 'lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: Total cell delay = 1.312 ns ( 56.26 % )
+        Info: Total interconnect delay = 1.020 ns ( 43.74 % )
+    Info: + Micro clock to output delay of source is 0.140 ns
+    Info: + Longest memory to pin delay is 5.893 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = M512_X24_Y2; Fanout = 8; MEM Node = 'lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: 2: + IC(0.000 ns) + CELL(1.793 ns) = 1.793 ns; Loc. = M512_X24_Y2; Fanout = 1; MEM Node = 'lpm_rom0:ROM|altsyncram:altsyncram_component|altsyncram_c981:auto_generated|q_a[2]'
+        Info: 3: + IC(0.500 ns) + CELL(0.053 ns) = 2.346 ns; Loc. = LCCOMB_X25_Y1_N26; Fanout = 1; COMB Node = 'MEM_lpm_mux0:inst4|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~0'
+        Info: 4: + IC(1.403 ns) + CELL(2.144 ns) = 5.893 ns; Loc. = PIN_V4; Fanout = 0; PIN Node = 'Q[2]'
+        Info: Total cell delay = 3.990 ns ( 67.71 % )
+        Info: Total interconnect delay = 1.903 ns ( 32.29 % )
+Info: Longest tpd from source pin "A[6]" to destination pin "Q[2]" is 8.705 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_W3; Fanout = 10; PIN Node = 'A[6]'
+    Info: 2: + IC(3.992 ns) + CELL(0.346 ns) = 5.158 ns; Loc. = LCCOMB_X25_Y1_N26; Fanout = 1; COMB Node = 'MEM_lpm_mux0:inst4|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~0'
+    Info: 3: + IC(1.403 ns) + CELL(2.144 ns) = 8.705 ns; Loc. = PIN_V4; Fanout = 0; PIN Node = 'Q[2]'
+    Info: Total cell delay = 3.310 ns ( 38.02 % )
+    Info: Total interconnect delay = 5.395 ns ( 61.98 % )
+Info: th for memory "lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5" (data pin = "D[5]", clock pin = "clock") is -2.127 ns
+    Info: + Longest clock path from clock "clock" to destination memory is 2.335 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.679 ns) + CELL(0.459 ns) = 2.335 ns; Loc. = M512_X24_Y1; Fanout = 1; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5'
+        Info: Total cell delay = 1.313 ns ( 56.23 % )
+        Info: Total interconnect delay = 1.022 ns ( 43.77 % )
+    Info: + Micro hold delay of destination is 0.203 ns
+    Info: - Shortest pin to memory delay is 4.665 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.772 ns) = 0.772 ns; Loc. = PIN_AA9; Fanout = 1; PIN Node = 'D[5]'
+        Info: 2: + IC(3.759 ns) + CELL(0.134 ns) = 4.665 ns; Loc. = M512_X24_Y1; Fanout = 1; MEM Node = 'lpm_ram_dq0:RAM|altsyncram:altsyncram_component|altsyncram_3kb1:auto_generated|ram_block1a0~porta_datain_reg5'
+        Info: Total cell delay = 0.906 ns ( 19.42 % )
+        Info: Total interconnect delay = 3.759 ns ( 80.58 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 194 megabytes
+    Info: Processing ended: Sat Dec 27 15:32:24 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

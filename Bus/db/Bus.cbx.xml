@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Bus">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Bus|MEM:MEM|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Bus|MEM:MEM|lpm_ram_dq0:RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3kb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Bus|MEM:MEM|lpm_rom0:ROM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_c981.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

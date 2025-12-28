@@ -1,0 +1,515 @@
+Classic Timing Analyzer report for Register
+Sat Dec 27 12:38:59 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                       ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                                            ; To                                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.303 ns    ; waddr[1]                                        ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.676 ns    ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; output[6]                                       ; clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 9.202 ns    ; raddr[0]                                        ; output[4]                                       ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.043 ns   ; data[7]                                         ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; --         ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                                 ;                                                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------+-------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 24     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                       ;
++-------+--------------+------------+----------+-------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                                              ; To Clock ;
++-------+--------------+------------+----------+-------------------------------------------------+----------+
+; N/A   ; None         ; 5.303 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A   ; None         ; 5.303 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A   ; None         ; 5.303 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A   ; None         ; 5.303 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A   ; None         ; 5.154 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A   ; None         ; 5.154 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A   ; None         ; 5.154 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A   ; None         ; 5.154 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A   ; None         ; 5.118 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A   ; None         ; 5.118 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A   ; None         ; 5.118 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A   ; None         ; 5.118 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A   ; None         ; 4.969 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A   ; None         ; 4.969 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A   ; None         ; 4.969 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A   ; None         ; 4.969 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A   ; None         ; 4.962 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 4.962 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 4.962 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 4.962 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 4.813 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 4.813 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 4.813 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 4.813 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 4.773 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A   ; None         ; 4.773 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A   ; None         ; 4.773 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A   ; None         ; 4.773 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A   ; None         ; 4.739 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.739 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.739 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.739 ns   ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 4.731 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A   ; None         ; 4.731 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A   ; None         ; 4.731 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A   ; None         ; 4.731 ns   ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.590 ns   ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 4.582 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A   ; None         ; 4.582 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A   ; None         ; 4.582 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A   ; None         ; 4.582 ns   ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A   ; None         ; 4.468 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 4.468 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 4.468 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 4.468 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 4.445 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A   ; None         ; 4.445 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A   ; None         ; 4.445 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A   ; None         ; 4.445 ns   ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.435 ns   ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 4.296 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A   ; None         ; 4.296 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A   ; None         ; 4.296 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A   ; None         ; 4.296 ns   ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.286 ns   ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 4.245 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.245 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.245 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.245 ns   ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 4.203 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A   ; None         ; 4.203 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A   ; None         ; 4.203 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A   ; None         ; 4.203 ns   ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 3.940 ns   ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 3.915 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A   ; None         ; 3.915 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A   ; None         ; 3.915 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A   ; None         ; 3.915 ns   ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A   ; None         ; 3.907 ns   ; data[6]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A   ; None         ; 3.907 ns   ; data[6]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A   ; None         ; 3.748 ns   ; data[2]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 3.748 ns   ; data[2]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A   ; None         ; 3.670 ns   ; data[4]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A   ; None         ; 3.670 ns   ; data[4]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A   ; None         ; 3.565 ns   ; data[2]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A   ; None         ; 3.565 ns   ; data[2]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A   ; None         ; 3.446 ns   ; data[6]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 3.431 ns   ; data[5]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A   ; None         ; 3.431 ns   ; data[5]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A   ; None         ; 3.374 ns   ; data[0]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 3.374 ns   ; data[0]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A   ; None         ; 3.328 ns   ; data[5]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 3.265 ns   ; data[5]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A   ; None         ; 3.209 ns   ; data[0]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A   ; None         ; 3.209 ns   ; data[0]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 3.201 ns   ; data[1]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 3.201 ns   ; data[1]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A   ; None         ; 3.183 ns   ; data[4]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 3.163 ns   ; data[3]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A   ; None         ; 3.163 ns   ; data[3]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 3.019 ns   ; data[1]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A   ; None         ; 3.019 ns   ; data[1]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A   ; None         ; 2.989 ns   ; data[7]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A   ; None         ; 2.989 ns   ; data[7]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A   ; None         ; 2.931 ns   ; data[3]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A   ; None         ; 2.931 ns   ; data[3]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A   ; None         ; 2.783 ns   ; data[7]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A   ; None         ; 2.696 ns   ; data[4]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A   ; None         ; 2.585 ns   ; data[6]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A   ; None         ; 2.282 ns   ; data[7]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
++-------+--------------+------------+----------+-------------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                          ;
++-------+--------------+------------+-------------------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                            ; To        ; From Clock ;
++-------+--------------+------------+-------------------------------------------------+-----------+------------+
+; N/A   ; None         ; 7.676 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; output[6] ; clock      ;
+; N/A   ; None         ; 7.669 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; output[5] ; clock      ;
+; N/A   ; None         ; 7.626 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; output[4] ; clock      ;
+; N/A   ; None         ; 7.250 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; output[4] ; clock      ;
+; N/A   ; None         ; 7.104 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; output[5] ; clock      ;
+; N/A   ; None         ; 7.072 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; output[7] ; clock      ;
+; N/A   ; None         ; 6.999 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; output[6] ; clock      ;
+; N/A   ; None         ; 6.933 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; output[7] ; clock      ;
+; N/A   ; None         ; 6.836 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; output[5] ; clock      ;
+; N/A   ; None         ; 6.817 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; output[4] ; clock      ;
+; N/A   ; None         ; 6.701 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; output[6] ; clock      ;
+; N/A   ; None         ; 6.699 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; output[5] ; clock      ;
+; N/A   ; None         ; 6.697 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; output[6] ; clock      ;
+; N/A   ; None         ; 6.631 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; output[2] ; clock      ;
+; N/A   ; None         ; 6.613 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; output[7] ; clock      ;
+; N/A   ; None         ; 6.577 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; output[0] ; clock      ;
+; N/A   ; None         ; 6.561 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; output[4] ; clock      ;
+; N/A   ; None         ; 6.485 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; output[7] ; clock      ;
+; N/A   ; None         ; 6.465 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; output[2] ; clock      ;
+; N/A   ; None         ; 6.458 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; output[3] ; clock      ;
+; N/A   ; None         ; 6.371 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; output[2] ; clock      ;
+; N/A   ; None         ; 6.335 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; output[1] ; clock      ;
+; N/A   ; None         ; 6.252 ns   ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; output[0] ; clock      ;
+; N/A   ; None         ; 6.189 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; output[3] ; clock      ;
+; N/A   ; None         ; 6.186 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; output[2] ; clock      ;
+; N/A   ; None         ; 6.173 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; output[1] ; clock      ;
+; N/A   ; None         ; 6.150 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; output[0] ; clock      ;
+; N/A   ; None         ; 6.107 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; output[1] ; clock      ;
+; N/A   ; None         ; 6.077 ns   ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; output[3] ; clock      ;
+; N/A   ; None         ; 6.042 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; output[3] ; clock      ;
+; N/A   ; None         ; 6.000 ns   ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; output[0] ; clock      ;
+; N/A   ; None         ; 5.890 ns   ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; output[1] ; clock      ;
++-------+--------------+------------+-------------------------------------------------+-----------+------------+
+
+
++--------------------------------------------------------------------+
+; tpd                                                                ;
++-------+-------------------+-----------------+----------+-----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To        ;
++-------+-------------------+-----------------+----------+-----------+
+; N/A   ; None              ; 9.202 ns        ; raddr[0] ; output[4] ;
+; N/A   ; None              ; 9.081 ns        ; raddr[0] ; output[6] ;
+; N/A   ; None              ; 9.018 ns        ; raddr[1] ; output[4] ;
+; N/A   ; None              ; 8.898 ns        ; raddr[1] ; output[5] ;
+; N/A   ; None              ; 8.865 ns        ; raddr[0] ; output[7] ;
+; N/A   ; None              ; 8.751 ns        ; raddr[1] ; output[6] ;
+; N/A   ; None              ; 8.720 ns        ; raddr[0] ; output[5] ;
+; N/A   ; None              ; 8.676 ns        ; raddr[1] ; output[7] ;
+; N/A   ; None              ; 8.631 ns        ; raddr[1] ; output[2] ;
+; N/A   ; None              ; 8.605 ns        ; raddr[0] ; output[2] ;
+; N/A   ; None              ; 8.446 ns        ; raddr[1] ; output[0] ;
+; N/A   ; None              ; 8.424 ns        ; raddr[0] ; output[0] ;
+; N/A   ; None              ; 8.338 ns        ; raddr[1] ; output[1] ;
+; N/A   ; None              ; 8.330 ns        ; raddr[1] ; output[3] ;
+; N/A   ; None              ; 8.314 ns        ; raddr[0] ; output[3] ;
+; N/A   ; None              ; 8.307 ns        ; raddr[0] ; output[1] ;
+; N/A   ; None              ; 7.598 ns        ; wren     ; output[7] ;
+; N/A   ; None              ; 7.293 ns        ; wren     ; output[1] ;
+; N/A   ; None              ; 7.283 ns        ; wren     ; output[3] ;
+; N/A   ; None              ; 6.976 ns        ; wren     ; output[4] ;
+; N/A   ; None              ; 6.879 ns        ; wren     ; output[0] ;
+; N/A   ; None              ; 6.815 ns        ; wren     ; output[2] ;
+; N/A   ; None              ; 6.775 ns        ; wren     ; output[5] ;
+; N/A   ; None              ; 6.756 ns        ; wren     ; output[6] ;
++-------+-------------------+-----------------+----------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; th                                                                                                              ;
++---------------+-------------+-----------+----------+-------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                                              ; To Clock ;
++---------------+-------------+-----------+----------+-------------------------------------------------+----------+
+; N/A           ; None        ; -2.043 ns ; data[7]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -2.346 ns ; data[6]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -2.457 ns ; data[4]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -2.544 ns ; data[7]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -2.692 ns ; data[3]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -2.692 ns ; data[3]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A           ; None        ; -2.750 ns ; data[7]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A           ; None        ; -2.750 ns ; data[7]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A           ; None        ; -2.780 ns ; data[1]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A           ; None        ; -2.780 ns ; data[1]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -2.924 ns ; data[3]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A           ; None        ; -2.924 ns ; data[3]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -2.944 ns ; data[4]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -2.962 ns ; data[1]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -2.962 ns ; data[1]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A           ; None        ; -2.970 ns ; data[0]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A           ; None        ; -2.970 ns ; data[0]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -3.026 ns ; data[5]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -3.089 ns ; data[5]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -3.135 ns ; data[0]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -3.135 ns ; data[0]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A           ; None        ; -3.192 ns ; data[5]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A           ; None        ; -3.192 ns ; data[5]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A           ; None        ; -3.207 ns ; data[6]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -3.326 ns ; data[2]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A           ; None        ; -3.326 ns ; data[2]  ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -3.431 ns ; data[4]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A           ; None        ; -3.431 ns ; data[4]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A           ; None        ; -3.509 ns ; data[2]  ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -3.509 ns ; data[2]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A           ; None        ; -3.668 ns ; data[6]  ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A           ; None        ; -3.668 ns ; data[6]  ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A           ; None        ; -3.676 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A           ; None        ; -3.676 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A           ; None        ; -3.676 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A           ; None        ; -3.676 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -3.701 ns ; wren     ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -3.964 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A           ; None        ; -3.964 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A           ; None        ; -3.964 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A           ; None        ; -3.964 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A           ; None        ; -4.006 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.006 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.006 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.006 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.047 ns ; waddr[0] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -4.057 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A           ; None        ; -4.057 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A           ; None        ; -4.057 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A           ; None        ; -4.057 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.196 ns ; waddr[1] ; lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -4.206 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[3]  ; clock    ;
+; N/A           ; None        ; -4.206 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[2]  ; clock    ;
+; N/A           ; None        ; -4.206 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[1]  ; clock    ;
+; N/A           ; None        ; -4.206 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[0]  ; clock    ;
+; N/A           ; None        ; -4.229 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -4.229 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -4.229 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -4.229 ns ; wren     ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -4.343 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A           ; None        ; -4.343 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A           ; None        ; -4.343 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A           ; None        ; -4.343 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A           ; None        ; -4.351 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A           ; None        ; -4.351 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A           ; None        ; -4.351 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A           ; None        ; -4.351 ns ; wren     ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A           ; None        ; -4.351 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.351 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.351 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.351 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -4.492 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[3]   ; clock    ;
+; N/A           ; None        ; -4.492 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[2]   ; clock    ;
+; N/A           ; None        ; -4.492 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[1]   ; clock    ;
+; N/A           ; None        ; -4.492 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]   ; clock    ;
+; N/A           ; None        ; -4.500 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.500 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.500 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.500 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -4.534 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A           ; None        ; -4.534 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A           ; None        ; -4.534 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A           ; None        ; -4.534 ns ; wren     ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A           ; None        ; -4.574 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -4.574 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -4.574 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -4.574 ns ; waddr[0] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -4.723 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7] ; clock    ;
+; N/A           ; None        ; -4.723 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[6] ; clock    ;
+; N/A           ; None        ; -4.723 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[5] ; clock    ;
+; N/A           ; None        ; -4.723 ns ; waddr[1] ; lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[4] ; clock    ;
+; N/A           ; None        ; -4.730 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A           ; None        ; -4.730 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A           ; None        ; -4.730 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A           ; None        ; -4.730 ns ; waddr[0] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A           ; None        ; -4.879 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[7]   ; clock    ;
+; N/A           ; None        ; -4.879 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[6]   ; clock    ;
+; N/A           ; None        ; -4.879 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[5]   ; clock    ;
+; N/A           ; None        ; -4.879 ns ; waddr[1] ; lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[4]   ; clock    ;
+; N/A           ; None        ; -4.915 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A           ; None        ; -4.915 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A           ; None        ; -4.915 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A           ; None        ; -4.915 ns ; waddr[0] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
+; N/A           ; None        ; -5.064 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]  ; clock    ;
+; N/A           ; None        ; -5.064 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[6]  ; clock    ;
+; N/A           ; None        ; -5.064 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[5]  ; clock    ;
+; N/A           ; None        ; -5.064 ns ; waddr[1] ; lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[4]  ; clock    ;
++---------------+-------------+-----------+----------+-------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 27 12:38:59 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Register -c Register --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "clock"
+Info: tsu for register "lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]" (data pin = "waddr[1]", clock pin = "clock") is 5.303 ns
+    Info: + Longest pin to register delay is 7.706 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_G3; Fanout = 4; PIN Node = 'waddr[1]'
+        Info: 2: + IC(4.704 ns) + CELL(0.346 ns) = 5.870 ns; Loc. = LCCOMB_X34_Y6_N30; Fanout = 8; COMB Node = 'GPRS_lpm_decode0:inst1|lpm_decode:lpm_decode_component|decode_0sf:auto_generated|w_anode14w[2]~0'
+        Info: 3: + IC(1.090 ns) + CELL(0.746 ns) = 7.706 ns; Loc. = LCFF_X33_Y13_N17; Fanout = 1; REG Node = 'lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]'
+        Info: Total cell delay = 1.912 ns ( 24.81 % )
+        Info: Total interconnect delay = 5.794 ns ( 75.19 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.493 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.678 ns) + CELL(0.618 ns) = 2.493 ns; Loc. = LCFF_X33_Y13_N17; Fanout = 1; REG Node = 'lpm_dff1:inst9|lpm_ff:lpm_ff_component|dffs[7]'
+        Info: Total cell delay = 1.472 ns ( 59.05 % )
+        Info: Total interconnect delay = 1.021 ns ( 40.95 % )
+Info: tco from clock "clock" to destination pin "output[6]" through register "lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6]" is 7.676 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X34_Y6_N3; Fanout = 1; REG Node = 'lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6]'
+        Info: Total cell delay = 1.472 ns ( 59.28 % )
+        Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 5.099 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X34_Y6_N3; Fanout = 1; REG Node = 'lpm_dff2:inst11|lpm_ff:lpm_ff_component|dffs[6]'
+        Info: 2: + IC(1.120 ns) + CELL(0.378 ns) = 1.498 ns; Loc. = LCCOMB_X33_Y13_N28; Fanout = 1; COMB Node = 'lpm_mux0:inst13|lpm_mux:lpm_mux_component|mux_1oc:auto_generated|l2_w6_n0_mux_dataout~0'
+        Info: 3: + IC(1.649 ns) + CELL(1.952 ns) = 5.099 ns; Loc. = PIN_U6; Fanout = 0; PIN Node = 'output[6]'
+        Info: Total cell delay = 2.330 ns ( 45.70 % )
+        Info: Total interconnect delay = 2.769 ns ( 54.30 % )
+Info: Longest tpd from source pin "raddr[0]" to destination pin "output[4]" is 9.202 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA5; Fanout = 8; PIN Node = 'raddr[0]'
+    Info: 2: + IC(4.268 ns) + CELL(0.357 ns) = 5.482 ns; Loc. = LCCOMB_X33_Y13_N12; Fanout = 1; COMB Node = 'lpm_mux0:inst13|lpm_mux:lpm_mux_component|mux_1oc:auto_generated|l2_w4_n0_mux_dataout~0'
+    Info: 3: + IC(1.576 ns) + CELL(2.144 ns) = 9.202 ns; Loc. = PIN_V3; Fanout = 0; PIN Node = 'output[4]'
+    Info: Total cell delay = 3.358 ns ( 36.49 % )
+    Info: Total interconnect delay = 5.844 ns ( 63.51 % )
+Info: th for register "lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7]" (data pin = "data[7]", clock pin = "clock") is -2.043 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.492 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.677 ns) + CELL(0.618 ns) = 2.492 ns; Loc. = LCFF_X37_Y10_N19; Fanout = 1; REG Node = 'lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7]'
+        Info: Total cell delay = 1.472 ns ( 59.07 % )
+        Info: Total interconnect delay = 1.020 ns ( 40.93 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.684 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N4; Fanout = 4; PIN Node = 'data[7]'
+        Info: 2: + IC(3.622 ns) + CELL(0.053 ns) = 4.529 ns; Loc. = LCCOMB_X37_Y10_N18; Fanout = 1; COMB Node = 'lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 4.684 ns; Loc. = LCFF_X37_Y10_N19; Fanout = 1; REG Node = 'lpm_dff3:inst12|lpm_ff:lpm_ff_component|dffs[7]'
+        Info: Total cell delay = 1.062 ns ( 22.67 % )
+        Info: Total interconnect delay = 3.622 ns ( 77.33 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 195 megabytes
+    Info: Processing ended: Sat Dec 27 12:39:01 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
